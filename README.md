@@ -48,6 +48,6 @@ To isolate boot issues on macOS 26, the following kexts are temporarily set to `
 - [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) for the legendary OpenCore Install Guide.
 - [techgenius1](https://github.com/techgenius1/Yoga530-14IKB-Hackintosh-OpenCore) for the README structure and configuration ideas for the Yoga 530.
 - [Acidanthera](https://github.com/acidanthera) for OpenCore and the essential kexts (Lilu, VirtualSMC, WhateverGreen).
-- [lvs1974](https://github.com/acidanthera/CpuTscSync) for **CpuTscSync**, the lifesaver that fixed the TSC sync issues on the i5-8250U.
+- [Acidanthera](https://github.com/acidanthera/CpuTscSync) for **CpuTscSync**, the lifesaver that fixed the TSC sync issues on the i5-8250U.
 - All the **Hackintosh Community** for sharing the knowledge that made this build possible.
 
