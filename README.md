@@ -2,7 +2,7 @@
 # Lenovo Yoga 530-14IKB-81EK Hackintosh Tahoe
 
 macOS Tahoe on Lenovo Yoga 530-14IKB-81EK with OpenCore 1.0.7
-<img src="https://github.com/tornado-bunk/Lenovo-Yoga-530-14IKB-81EK-Hackintosh-Ventura/blob/main/TahoeYoga.png" alt="look">
+<img src="https://github.com/tornado-bunk/Lenovo-Yoga-530-14IKB-81EK-Hackintosh-Ventura/blob/experimental/tahoe/TahoeYoga.png" alt="look">
 
 ## Configuration
 
@@ -50,3 +50,4 @@ To isolate boot issues on macOS 26, the following kexts are temporarily set to `
 - [Acidanthera](https://github.com/acidanthera) for OpenCore and the essential kexts (Lilu, VirtualSMC, WhateverGreen).
 - [lvs1974](https://github.com/acidanthera/CpuTscSync) for **CpuTscSync**, the lifesaver that fixed the TSC sync issues on the i5-8250U.
 - All the **Hackintosh Community** for sharing the knowledge that made this build possible.
+
