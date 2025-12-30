@@ -1,8 +1,8 @@
 
-# Lenovo Yoga 530-14IKB-81EK Hackintosh Ventura
+# Lenovo Yoga 530-14IKB-81EK Hackintosh Tahoe
 
-macOS Ventura on Lenovo Yoga 530-14IKB-81EK with OpenCore 1.0.7
-<img src="https://github.com/tornado-bunk/Lenovo-Yoga-530-14IKB-81EK-Hackintosh-Ventura/blob/main/VenturaYoga.png" alt="look">
+macOS Tahoe on Lenovo Yoga 530-14IKB-81EK with OpenCore 1.0.7
+<img src="https://github.com/tornado-bunk/Lenovo-Yoga-530-14IKB-81EK-Hackintosh-Ventura/blob/main/TahoeYoga.png" alt="look">
 
 ## Configuration
 
@@ -20,13 +20,29 @@ macOS Ventura on Lenovo Yoga 530-14IKB-81EK with OpenCore 1.0.7
 
 - [ ] Fingerprint
 - [ ] Pen
+- [ ] Wifi
+- [ ] Bluetooth
+- [ ] Almost everything
 
 ## Please note that:
 - You should add Serial Number, UUID, MLB and ROM details to Config -> PlatformInfo -> Generic if you want to get iServices working.
 
 ## Experimental: macOS 26 Tahoe
-- There is an **experimental branch** for macOS 26 Tahoe.
+- This is an **experimental branch** for macOS 26 Tahoe.
 - **Status:** It boots successfully, but most features (Wi-Fi, etc.) are still missing, unstable and untested.
+
+### Branch Specifics (Tahoe vs Ventura)
+- **Wi-Fi:** Switched to `itlwm.kext` instead of `AirportItlwm`.
+  - *Note:* You MUST use the [HeliPort](https://github.com/OpenIntelWireless/HeliPort) app to manage connections.
+- **Audio:** `AppleALC` has been removed; testing `VoodooHDA` injection for this kernel version. 
+- **Booter:** Enabled `FixupAppleEfiImages` quirk to ensure compatibility with the Tahoe bootloader. 
+
+### Kexts Currently DISABLED (Testing Phase)
+To isolate boot issues on macOS 26, the following kexts are temporarily set to `false` in the config: 
+- **Battery & Sensors:** `SMCBatteryManager`, `SMCLightSensor`, `SMCProcessor`, `SMCSuperIO`. 
+- **Bluetooth:** Full Intel Bluetooth suite (`BlueToolFixup`, `IntelBTPatcher`, `IntelBluetoothFirmware`). 
+- **Yoga Features:** `YogaSMC` and `BrightnessKeys`. 
+- **USB Mapping:** `USBToolBox` and `UTBDefault`.
 
 ## Credits
 - [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) for the legendary OpenCore Install Guide.
